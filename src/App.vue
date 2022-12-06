@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <navigation-menu></navigation-menu>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavigationMenu from '@/components/Navigation.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    NavigationMenu
   }
 }
 </script>
@@ -21,6 +20,22 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+nav {
+  padding: 30px;
+  float: left;
+  position: absolute;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  display: block;
+  text-decoration: none;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
